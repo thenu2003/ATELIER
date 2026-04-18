@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Georgia", serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --color-primary: #1A1A1A;
+  --color-secondary: #1A1A1A;
+  --color-background: #F5F2ED;
+  --color-accent: #E4E0D8;
+  --color-on-surface: #1A1A1A;
+  --color-surface-container: #E4E0D8;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-sans antialiased;
+  }
+}
+
+.artistic-border {
+  @apply border border-on-surface;
+}
+
+.artistic-border-b {
+  @apply border-b border-on-surface;
+}
+
+.artistic-border-r {
+  @apply border-r border-on-surface;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  @apply rotate-180 uppercase tracking-[0.3em] font-semibold opacity-60;
+}
+
+.hero-title {
+  @apply font-serif text-[120px] leading-[0.8] tracking-[-0.03em];
+}
+
